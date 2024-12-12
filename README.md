@@ -55,13 +55,13 @@
 1. Автоматичний логін без використання Tor:
 
     ```sh
-    python autologin.py -l ваш_логін -p ваш_файл_з_паролями
+    python autologin.py -l LOGIN -p PASSWORD_FILE --url https://google.com
     ```
 
 2. Автоматичний логін з використанням Tor:
 
     ```sh
-    python autologin.py --tor -l ваш_логін -p ваш_файл_з_паролями
+    python autologin.py --tor -l LOGIN -p PASSWORD_FILE --url https://google.com
     ```
 
 ### Утиліта для фільтрації паролів
