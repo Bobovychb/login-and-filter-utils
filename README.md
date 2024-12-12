@@ -13,12 +13,14 @@
     sudo apt install python3-pip -y
     ```
 
-2. Встановіть пакети для `pyopencl`:
+2. Встановіть пакети для `pyopencl` та інші необхідні пакети:
 
     ```sh
     sudo apt install -y ocl-icd-libopencl1 opencl-headers clinfo
     sudo apt install -y build-essential python3-dev python3-pip
     sudo apt install -y ocl-icd-opencl-dev
+    sudo apt install -y libffi-dev libssl-dev
+    sudo apt install -y tor
     ```
 
 3. Клонування репозиторію та встановлення залежностей:
@@ -26,7 +28,20 @@
     ```sh
     git clone https://github.com/Bobovychb/login-and-filter-utils.git
     cd login-and-filter-utils
-    pip3 install -r requirements.txt
+    ```
+
+4. Встановіть залежності для кожного проекту:
+
+    Для фільтрації паролів:
+
+    ```sh
+    pip3 install -r requirements_filter.txt
+    ```
+
+    Для автоматичного логіну:
+
+    ```sh
+    pip3 install -r requirements_autologin.txt
     ```
 
 ## Використання
@@ -74,6 +89,10 @@
 - `--tor` – Використовувати Tor мережу для автологіну (для autologin.py)
 - `-g`, `--gpu` – Використовувати GPU для фільтрації паролів (для filter.py)
 - `-o`, `--output` – Шлях для збереження відфільтрованих паролів (для filter.py)
+
+## Важлива примітка
+
+Ці утиліти призначені для використання у легальних цілях, таких як тестування безпеки ваших власних систем або систем, на які ви маєте відповідний дозвіл. Автор не несе відповідальності за будь-яку шкоду, спричинену в результаті неправомірного використання цих утиліт.
 
 ## Внесок
 
